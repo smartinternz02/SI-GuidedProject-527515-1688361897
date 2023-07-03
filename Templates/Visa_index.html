@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<!-- form with css-->
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url('{{ url_for("static", filename="images/vp.jpg") }}');
+            background-size: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+  <div class="container">
+
+   <h1>H1B VISA PREDICTION</h1>
+   
+    <form action="/login" method="post">
+    
+    <label for="ap_pos">Select application position</label>
+    <select name="s">
+        <option value="ft">Yes</option>
+        <option value="pt">No</option>
+    </select>
+    
+    <p>Enter your wage</p>
+    <p><input type="text" name="ms"></p>
+    
+    <p>Enter your application year</p>
+    <p><input type="text" name="as"></p>
+    
+    <label for="states">Select occupation code for the employment</label>
+    <select name="c">
+        <option value="cs">Computer system analysts</option>
+        <option value="cp">Computer Programmers</option>
+        <option value="csa">COMPUTER SYSTEMS ANALYSTS</option>
+        <option value="sd">SOFTWARE DEVELOPERS, APPLICATIONS</option>
+        <option value="rc">Logistics</option>
+        <option value="fd">Financial department</option>
+        <option value="hf">Health professionals</option>
+        <option value="st">Elementary school teachers</option>
+        <option value="ce">CHIEF EXECUTIVES</option>
+        <option value="bc">BIOCHEMISTS AND BIOPHYSICISTS</option>
+        <option value="llc">LESSARD INTERNATIONAL LLC</option>
+    </select>
+    
+    <p><input type="submit" value="Predict"></p>
+    </form>
+    {{y}}
+   </div>
+   
+</body>
+</html>
